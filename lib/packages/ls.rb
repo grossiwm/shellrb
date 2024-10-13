@@ -24,7 +24,7 @@ class Ls
     end
 
     # Use the Core class of ShellRB to print result
-    Core.print_result result
+    Core.print_result prepared_result result
     result
   end
 
@@ -48,5 +48,14 @@ class Ls
       non_hidden.add entry unless entry[0] == '.'
     end
     non_hidden
+  end
+
+  def self.prepared_result unprepared_result
+    array = unprepared_result.to_a
+
+    array.each_with_index do |entry, index|
+      array[index] = "#{entry} " unless index == array.size - 1
+    end
+    Set.new(array)
   end
 end
