@@ -9,10 +9,7 @@ name: Ruby
 
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-
+    branches: [ "ci-adjust" ]
 permissions:
   contents: read
 
