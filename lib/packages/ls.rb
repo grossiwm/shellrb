@@ -1,6 +1,10 @@
 require 'set'
 require_relative 'core'
 
+# The Ls class simulates a simplified version of the Unix 'ls' command,
+# listing files and directories in the current working directory.
+# It includes options for showing all files, including hidden ones,
+# or just non-hidden files by default.
 class Ls
   def self.main params
     # Create new instance of Ruby data structure Set to add output to it
